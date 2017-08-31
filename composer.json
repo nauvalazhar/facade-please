@@ -1,0 +1,13 @@
+{
+    "name": "nauvalazhar/facade-please",
+    "description": "Laravel 5 Facade Generator",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Muhamad Nauval Azhar",
+            "email": "nauvalazhar2@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
