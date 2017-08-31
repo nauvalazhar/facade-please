@@ -29,7 +29,7 @@ php artisan vendor:publish --tag=facadeplease
 ```
 
 # Credits
-Thanks to @rizalio for any help!
+Thanks to [@rizalio](https://github.com/rizalio) for any help!
 
 # License
 MIT License
