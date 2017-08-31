@@ -3,7 +3,7 @@ Sometimes you want to create a facade for globally accessible method, but you do
 
 # Installation
 ```
-composer install facade-please
+composer require nauvalazhar/facade-please
 ```
 Add to `config/app.php`
 ```
