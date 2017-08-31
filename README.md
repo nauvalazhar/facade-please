@@ -3,7 +3,7 @@ Sometimes you want to create a facade for globally accessible method, but you do
 
 # Installation
 ```
-composer install facade-please
+composer install nauvalazhar/facade-please
 ```
 Add to `config/app.php`
 ```
@@ -29,7 +29,7 @@ php artisan vendor:publish --tag=facadeplease
 ```
 
 # Credits
-Thanks to @rizalio for any help!
+Thanks to [@rizalio](https://github.com/rizalio) for any help!
 
 # License
 MIT License

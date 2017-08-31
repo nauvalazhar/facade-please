@@ -2,12 +2,19 @@
     "name": "nauvalazhar/facade-please",
     "description": "Laravel 5 Facade Generator",
     "license": "MIT",
+    "keywords": [
+        "facade",
+        "generator"
+    ],
     "authors": [
         {
             "name": "Muhamad Nauval Azhar",
             "email": "nauvalazhar2@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
-    "require": {}
+    "autoload": {
+        "psr-4": {
+            "Nauvalazhar\\FacadePlease\\": "src/"
+        }
+    }
 }
