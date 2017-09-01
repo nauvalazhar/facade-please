@@ -12,7 +12,11 @@
             "email": "nauvalazhar2@gmail.com"
         }
     ],
+    "minimum-stability": "dev",
     "autoload": {
+        "classmap": [
+            "src"
+        ],
         "psr-4": {
             "Nauvalazhar\\FacadePlease\\": "src/"
         }
