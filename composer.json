@@ -2,6 +2,7 @@
     "name": "nauvalazhar/facade-please",
     "description": "Laravel 5 Facade Generator",
     "license": "MIT",
+    "type": "library",
     "keywords": [
         "facade",
         "generator"
