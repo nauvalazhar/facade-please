@@ -17,6 +17,7 @@ Add to `config/app.php`
 ```
 php artisan facade:please YourFacade
 ```
+The Generated facade will be stored in the `MyFacades` folder by default, but you can change the destination folder in the `config/facadeplease.php` file. Before doing that, you need to do this step.
 
 ### Delete
 ```
