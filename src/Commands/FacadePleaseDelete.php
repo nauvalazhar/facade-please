@@ -66,7 +66,7 @@ class FacadePleaseDelete extends Command
             $this->info('=> ' . $path_facade . $name . "ClassFacade.php");
             $this->info('=> ' . $path_facade . $name . "Facade.php");
             $this->info('=> ' . $path_provider);
-            $confirm = $this->confirm("The command can't be undone and some functions may won't work. \nDo you wish to contiune?");
+            $confirm = $this->confirm("The command can't be undone and some functions may not work. \nDo you wish to contiune?");
             if($confirm == true) {
                 $this->info('Deleting service provider ...');
                 unlink($path_provider);
@@ -88,7 +88,7 @@ class FacadePleaseDelete extends Command
                 $this->info('Facade deleted successfully!');
             }
         }else{
-            $this->error('Facade doesn\'t exist!');
+            $this->error("\n    Facade doesn't exist!\n");
         }
     }
 }

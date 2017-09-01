@@ -10,6 +10,8 @@ class FacadePleaseServiceProvider extends ServiceProvider
         'Nauvalazhar\FacadePlease\Commands\FacadePlease',
         'Nauvalazhar\FacadePlease\Commands\FacadePleaseCreate',
         'Nauvalazhar\FacadePlease\Commands\FacadePleaseDelete',
+        'Nauvalazhar\FacadePlease\Commands\FacadePleaseList',
+        'Nauvalazhar\FacadePlease\Commands\FacadePleaseDiag',
     ];
 
     /**

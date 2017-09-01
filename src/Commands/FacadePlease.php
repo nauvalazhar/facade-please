@@ -12,7 +12,7 @@ class FacadePlease extends Command
      *
      * @var string
      */
-    protected $signature = 'facade {mode}';
+    protected $signature = 'facade {argument?}';
 
     /**
      * The console command description.
@@ -38,26 +38,51 @@ class FacadePlease extends Command
      */
     public function handle()
     {
-        $mode = $this->argument('mode');
-        if($mode == 'about') {
+        $arg = $this->argument('argument');
+        if(!$arg || $arg == 'about') {
             $this->info("\nWelcome to Laravel 5 Facade Generator!\n
 Here you can create your own facade easily, just one command and your facade is ready to use.\n
 Usage:
-Create => php artisan facade:please MyFacade
-Delete => php artisan facade:delete MyFacade
+php artisan facade usage
 
 Credits:
 => @nauvalazhar
 => @rizalio\n
 Thanks for using this package.
 ");
-        }else if($mode == 'version') {
-            $this->info('Version 0.1.0');
+        }else if($arg == 'version') {
+            $this->info('Version 0.2.0');
+        }else if($arg == 'usage') {
+            $this->info("
+Create | Create a new facade
+------
+php artisan facade:please MyFacade
+
+
+Delete | Delete facade
+------
+php artisan facade:delete MyFacade
+
+
+List | List all facades
+----
+php artisan facade:list
+
+
+Diagnosis | Get facade information
+---------
+php artisan facade:diag MyFacade [--methods] [--public] [--private]
+
+
+More info
+---------
+GitHub: https://github.com/nauvalazhar/facade-please
+
+");
         }else{
-            $this->info('Command "' . $mode . '" is undefined!');
+            $this->info('Command "' . $arg . '" is undefined!');
             $this->info("\nUsage:
-Create => php artisan facade:please MyFacade
-Delete => php artisan facade:delete MyFacade");
+php artisan facade usage\n");
         }
     }
 }

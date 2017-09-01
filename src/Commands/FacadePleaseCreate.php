@@ -68,7 +68,7 @@ class FacadePleaseCreate extends Command
         
         // Checking
         if(file_exists($path_provider)) {
-            return $this->error("'" . $name . "' facade already exists!");
+            return $this->error("'" . $name . "' facade already exists!\n");
         }
 
         // Generate provider
@@ -133,10 +133,13 @@ class ".$name."ClassFacade {
         $config = config_path('app.php');
         $configdata = file_get_contents($config);
         $configdata = explode("],", $configdata);
-        $alias = $configdata[0] . '
+        $last_char1 = substr(trim($configdata[0]), -1);
+        $last_char2 = substr(trim($configdata[1]), -1);
+        $alias = trim($configdata[0]) . ($last_char1 !== ',' ? ',' : '') . '
         App\Providers\\'.$class.'::class,
 ],';
-        $facade = $configdata[1] . "    '".$name."' => App\\".config('facadeplease.namespace')."\\".$name."Facade::class,
+        $facade = trim($configdata[1]) . ($last_char2 !== ',' ? ',' : '') . "
+        '".$name."' => App\\".config('facadeplease.namespace')."\\".$name."Facade::class,
     ],
 ];";
         $datatopush = $alias . $facade;
@@ -146,7 +149,7 @@ class ".$name."ClassFacade {
         exec('composer dump-autoload -o');
         
         $this->info("Facade `" . $name . "` generated successfully.\n");
-        $this->info("\nUsage:\nuse App\\".config('facadeplease.namespace')."\\".$name.";\n\n" . $name . "::hello();");
+        $this->info("\nUsage:\nuse App\\".config('facadeplease.namespace')."\\".$name.";\n" . $name . "::hello();");
 
         $this->info("\nDone!");
     }
