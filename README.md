@@ -37,7 +37,6 @@ php artisan vendor:publish --tag=facadeplease
 ```
 0.2.0 - Hope you love this
 -----
-
 New
 ---
 - Optional argument for command: php artisan facade
@@ -54,12 +53,12 @@ Changes
 
 0.1.1 - Initial release
 -----
-
 Fix
-~~~
+---
 - fix Composer.json
 
 0.1.0 - First release (Don't use this)
+- First commit
 ```
 
 # Credits
