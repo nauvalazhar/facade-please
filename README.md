@@ -17,6 +17,11 @@ Add to `config/app.php`
 ```
 
 # Usage
+### Usage List
+```
+php artisan facade usage
+```
+
 ### Create
 ```
 php artisan facade:please YourFacade
@@ -26,6 +31,16 @@ The Generated facade will be stored in the `app/MyFacades` folder by default, bu
 ### Delete
 ```
 php artisan facade:delete YourFacade
+```
+
+### List All Facades
+```
+php artisan facade:list
+```
+
+### Get Facade Information
+```
+php artisan facade:diag YourFacade [--methods] [--public] [--private]
 ```
 
 ### Configuration
