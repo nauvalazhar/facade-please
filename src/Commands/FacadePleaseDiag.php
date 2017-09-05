@@ -56,7 +56,7 @@ class FacadePleaseDiag extends Command
         }
         $get_content = file_get_contents($path);
         $get_content = trim($get_content);
-        $class = new \ReflectionClass("App" . $this->path . config("facadeplease.namespace") .$this->path . $name . "ClassFacade");
+        $class = new \ReflectionClass("App\\" . config("facadeplease.namespace") . "\\" . $name . "ClassFacade");
         $methods = $class->getMethods(\ReflectionMethod::IS_PUBLIC);
         $private = $class->getMethods(\ReflectionMethod::IS_PRIVATE);
         $_m = "";
